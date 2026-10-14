@@ -1,347 +1,272 @@
 # AI-Based Automotive Visual Inspection & Quality Control System
 
-An experimental computer-vision application that analyzes vehicle or
-car-part images and highlights potential damage using a trained YOLO
-model. The Streamlit interface displays predicted damage labels,
-confidence scores, annotated images, and downloadable CSV inspection
-reports.
+**Author:** Rohit Rajaram Yadav  
+**Domain:** Artificial Intelligence, Computer Vision & Automotive Quality Inspection  
+**Education:** B.Tech — Automation & Robotics Engineering
 
-> **Important:** This is a prototype, not a certified automotive
-> inspection system. The current model has low detection performance and
-> may miss visible damage or produce false detections. Every result must
-> be checked by a qualified human inspector. Do not use this application
-> as the sole basis for safety, repair, or quality-control decisions.
+[![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-FF4B4B?logo=streamlit)](https://streamlit.io/)
+[![YOLO](https://img.shields.io/badge/YOLO-Object%20Detection-purple)](https://docs.ultralytics.com/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-EE4C2C?logo=pytorch)](https://pytorch.org/)
 
-## 🚀 Live Demo
+## 1. Project Overview
 
-**Streamlit App:** `ADD_YOUR_STREAMLIT_APP_URL_HERE`
+The **AI-Based Automotive Visual Inspection & Quality Control System** is an experimental computer-vision project designed to detect visible damage on vehicle images using a trained YOLO-based model.
 
-After deployment, replace the placeholder above with the public
-Streamlit Community Cloud URL. Visitors will then be able to open the
-app in their browser.
+The application provides a Streamlit interface where users can upload a vehicle image, view predicted damage detections, review confidence scores, and download a CSV inspection report.
 
-## 📌 Project Overview
+The project demonstrates how computer vision and deep learning can be applied to automotive visual inspection workflows.
 
-Automotive inspection can involve reviewing images for visible damage
-such as dents, scratches, corrosion, cracks, paint chips, and missing or
-broken parts. This project explores how computer vision can support that
-review process.
+**Important:** This is an educational prototype. The current model has low detection performance and requires further training and validation before it could be considered for practical inspection use.
 
-The application lets a user upload an image, run model inference,
-inspect predicted detections, and download the results as a CSV file for
-further review. The prediction output is intended to support---not
-replace---human inspection.
+## 2. Project Objectives
 
-## 🎯 Project Objectives
+- Develop an AI-based prototype for automotive damage detection.
+- Apply a trained YOLO model to uploaded vehicle images.
+- Display predicted damage labels, confidence scores, and bounding boxes.
+- Generate downloadable CSV inspection reports.
+- Explore the application of computer vision in automotive quality control.
+- Identify areas for improvement in model accuracy and reliability.
 
--   Build a simple browser-based interface for image inspection.
--   Apply a trained YOLO model to uploaded automotive images.
--   Display predicted damage categories and confidence scores.
--   Show annotated images with detection boxes.
--   Present detection details in a table.
--   Export inspection information as a CSV report.
--   Make the prototype accessible through Streamlit Community Cloud.
+## 3. Damage Categories
 
-## ✨ Key Features
+The model was trained to detect the following eight damage categories:
 
--   **Image upload:** Upload a supported vehicle or car-part image.
--   **Damage detection:** Run the trained model on the uploaded image.
--   **Visual results:** Display the image with predicted detections.
--   **Confidence scores:** Review the model's confidence for each
-    prediction.
--   **Detection table:** Review the predicted class and associated
-    details.
--   **Inspection metadata:** Record available inspection information in
-    the app.
--   **CSV export:** Download inspection results for record-keeping and
-    human review.
--   **Human-review reminder:** Results are not treated as a certified
-    pass/fail decision.
+| Class ID | Damage Category |
+|---:|---|
+| 0 | Broken part |
+| 1 | Corrosion |
+| 2 | Cracked |
+| 3 | Dent |
+| 4 | Flaking |
+| 5 | Missing part |
+| 6 | Paint chip |
+| 7 | Scratch |
 
-## 🧩 Damage Categories
+## 4. Technology Stack
 
-The model was trained with these eight damage categories:
+| Technology | Purpose |
+|---|---|
+| Python | Application programming |
+| Streamlit | Interactive web interface |
+| Ultralytics YOLO | Object detection and segmentation |
+| PyTorch | Deep learning framework |
+| Pillow | Image handling |
+| Pandas | Inspection data and CSV reports |
+| Git and GitHub | Version control and project hosting |
+| Streamlit Community Cloud | Intended web deployment platform |
 
-1.  Broken part
-2.  Corrosion
-3.  Cracked
-4.  Dent
-5.  Flaking
-6.  Missing part
-7.  Paint chip
-8.  Scratch
+## 5. Model Evaluation Results
 
-A prediction indicates what the model detected in an image; it does not
-confirm that the vehicle has that defect.
+The following results are from the recorded test evaluation of the current trained model.
 
-## 🖥️ Application Output
+### Bounding-box metrics
 
-The screenshots below are intended to show example application outputs.
-Copy your actual screenshots into the `Inspection Report` folder and
-rename them to match these paths, or update the paths in this README to
-match your filenames.
+| Metric | Result |
+|---|---:|
+| Precision | 18.42% |
+| Recall | 14.03% |
+| mAP@50 | 10.76% |
+| mAP@50–95 | 5.61% |
 
-### Example 1 --- Damage detection
+### Segmentation-mask metrics
 
-![Automotive inspection output 1](Inspection%20Report/output_1.png)
+| Metric | Result |
+|---|---:|
+| Precision | 18.95% |
+| Recall | 11.84% |
+| mAP@50 | 9.13% |
+| mAP@50–95 | 4.08% |
 
-### Example 2 --- Detection results
+### Interpretation
 
-![Automotive inspection output 2](Inspection%20Report/output_2.png)
+These results indicate that the current model has limited damage-detection performance. It may miss visible damage, produce false-positive detections, or identify damage incorrectly.
 
-### Example 3 --- Annotated vehicle image
+The model should be treated as an experimental prototype. All predictions require human verification, and the results should not be interpreted as proof that a vehicle is safe or free from damage.
 
-![Automotive inspection output 3](Inspection%20Report/output_3.png)
+## 6. Application Features
 
-### Example 4 --- Additional inspection result
+- Upload vehicle images in JPG, JPEG, or PNG format.
+- Select a vehicle model in the application.
+- Enter inspector information.
+- Adjust confidence and IoU thresholds.
+- Run the trained model on an uploaded image.
+- View annotated images with predicted damage labels.
+- Review confidence scores and detection details.
+- View predicted bounding-box coordinates.
+- Download CSV inspection reports.
+- Record inspection metadata and review status.
 
-![Automotive inspection output 4](Inspection%20Report/output_4.png)
+## 7. Project Structure
 
-### Example 5 --- Additional inspection result
-
-![Automotive inspection output 5](Inspection%20Report/output_5.png)
-
-> GitHub displays images only when the referenced files are committed to
-> the repository at the specified paths. Replace these example paths
-> with the exact filenames of your saved screenshots if needed. Use
-> screenshots that accurately represent the application; do not present
-> selected detections as proof of high overall accuracy.
-
-## 📄 CSV Inspection Reports
-
-The app can export inspection results as CSV files. Add your actual
-exported CSV reports to `Inspection Report/` and list the filenames
-below.
-
-  -----------------------------------------------------------------------
-  Report                              Description
-  ----------------------------------- -----------------------------------
-  `inspection_report_1.csv`           Example CSV report for an inspected
-                                      image
-
-  `inspection_report_2.csv`           Example CSV report for another
-                                      image
-
-  `inspection_report_3.csv`           Example CSV report for another
-                                      image
-  -----------------------------------------------------------------------
-
-The filenames above are examples. Rename the links to match the actual
-CSV reports you upload.
-
--   [Open CSV report 1](Inspection%20Report/inspection_report_1.csv)
--   [Open CSV report 2](Inspection%20Report/inspection_report_2.csv)
--   [Open CSV report 3](Inspection%20Report/inspection_report_3.csv)
-
-CSV files contain model-generated results and should be reviewed
-alongside the original image. A CSV report does not independently verify
-whether a detected defect is real.
-
-## 🧠 Model and Dataset
-
-The model was trained using the public **Car Parts and Car Damages
-Dataset** from Humans in the Loop:
-
--   Dataset page:
-    https://humansintheloop.org/resources/datasets/car-parts-and-car-damages-dataset/
--   Dataset license stated by the project notes: CC0
-
-The training workflow used a damage-only dataset with eight target
-classes and a YOLO segmentation model. The trained weights used by the
-app are stored in `best.pt`.
-
-### Reported test results
-
-The final test evaluation for the current model was:
-
-  Metric         Box result   Mask result
-  ------------ ------------ -------------
-  Precision          18.42%        18.95%
-  Recall             14.03%        11.84%
-  mAP@50             10.76%         9.13%
-  mAP@50--95          5.61%         4.08%
-
-These results indicate that the model is currently experimental and not
-reliable enough for independent real-world inspection. It may miss
-defects and may also generate incorrect or overlapping detections.
-Improving dataset quality, annotation consistency, class balance, and
-training/evaluation is a future task.
-
-## ⚙️ Technology Stack
-
-  Technology                  Purpose
-  --------------------------- -------------------------------------------
-  Python                      Application and inference logic
-  Streamlit                   Web interface
-  Ultralytics YOLO            Object detection / segmentation inference
-  PyTorch                     Model runtime
-  Pillow                      Image handling
-  Pandas                      Tabular data and CSV reporting
-  Git and GitHub              Version control and source hosting
-  Streamlit Community Cloud   Planned public deployment
-
-## 📁 Project Structure
-
-``` text
+```text
 Automotive_Inspection/
+│
 ├── app.py
 ├── best.pt
 ├── requirements.txt
-├── README.md
-└── Inspection Report/
-    ├── output_1.png
-    ├── output_2.png
-    ├── output_3.png
-    ├── output_4.png
-    ├── output_5.png
-    ├── inspection_report_1.csv
-    ├── inspection_report_2.csv
-    └── inspection_report_3.csv
+│
+├── Dataset/
+│
+├── Inspection Report/
+│   ├── Car damages 4.png
+│   ├── Car damages 103.png
+│   ├── Car damages 11.png
+│   ├── Car damages 152.png
+│   ├── Car damages 72.png
+│   ├── Car damages 255.png
+│   ├── Car damages 85/1.png
+│   ├── inspection report CSV files
+│   └── other inspection outputs
+│
+└── README.md
 ```
 
-The screenshot and CSV names shown above are suggested examples. Keep
-your actual filenames or rename the README references accordingly. The
-original `Dataset/` folder is intentionally not shown here; it is
-usually better not to upload the entire dataset to GitHub when the app
-only needs the trained model and application files.
+*Note: The names and subfolder structure above are illustrative based on the supplied report-folder listing. Keep the actual filenames and paths from your project when organizing the repository.*
 
-### File responsibilities
+## 8. Installation and Local Execution
 
--   `app.py` --- Streamlit user interface, inference, result display,
-    and report export.
--   `best.pt` --- trained model weights loaded by the application.
--   `requirements.txt` --- Python package dependencies.
--   `Inspection Report/` --- selected output screenshots and sample CSV
-    reports.
--   `README.md` --- project documentation.
+### Prerequisites
 
-## 🛠️ Run Locally
+- Python installed on your computer.
+- Git, if you plan to publish the project on GitHub.
+- The project files, including `app.py`, `best.pt`, and `requirements.txt`.
 
-### 1. Clone the repository
+### Step 1: Open the project folder
 
-Replace the URL if your repository name differs:
+Open a terminal in the project directory:
 
-``` bash
-git clone https://github.com/ar-rohit01/Automotive_Inspection.git
-cd Automotive_Inspection
+```bash
+cd D:\Automotive_Inspection
 ```
 
-### 2. Create and activate a virtual environment (recommended)
+### Step 2: Install dependencies
 
-**Windows:**
-
-``` bash
-python -m venv .venv
-.venv\Scripts\activate
-```
-
-**macOS / Linux:**
-
-``` bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-### 3. Install dependencies
-
-``` bash
+```bash
 pip install -r requirements.txt
 ```
 
-### 4. Start Streamlit
+### Step 3: Start the Streamlit application
 
-``` bash
+```bash
 python -m streamlit run app.py
 ```
 
-Open the local URL shown in the terminal, usually
-`http://localhost:8501`.
+### Step 4: Open the application
 
-## ☁️ Deployment on Streamlit Community Cloud
+Open the local URL shown in the terminal, usually:
 
-The deployment process requires a GitHub repository containing the
-application source, dependency file, and model weights.
-
-1.  Push the project files to the GitHub repository.
-2.  Open https://share.streamlit.io/.
-3.  Choose **Create app** / **Deploy an app**.
-4.  Select the `Automotive_Inspection` repository and its branch.
-5.  Set the app entry point to `app.py`.
-6.  Deploy and wait for the build to complete.
-7.  Test the live app by uploading a sample image.
-8.  Replace `ADD_YOUR_STREAMLIT_APP_URL_HERE` above with the final app
-    URL.
-
-Deployment can fail if dependency versions are unavailable or
-incompatible. If that happens, review the Streamlit build logs and
-update `requirements.txt` based on the error.
-
-## 🔍 Typical Workflow
-
-``` text
-Upload vehicle/car-part image
-            ↓
-Choose inspection settings
-            ↓
-Run model inference
-            ↓
-View annotated image and predicted labels
-            ↓
-Review confidence scores and detection table
-            ↓
-Download CSV report
-            ↓
-Human inspector reviews the original image and predictions
+```text
+http://localhost:8501
 ```
 
-## ⚠️ Limitations and Responsible Use
+Upload an image to view the model's predictions and available inspection-report information.
 
--   The current test metrics are low, so predictions are not dependable
-    enough for standalone use.
--   The model may miss real damage, produce false positives, or place
-    overlapping boxes.
--   Confidence scores are model outputs, not probabilities that a defect
-    definitely exists.
--   Image quality, lighting, viewpoint, and damage appearance may affect
-    results.
--   This prototype does not certify a vehicle as safe, damaged, or
-    repair-ready.
--   A human inspector must verify every result against the original
-    image.
--   Do not upload private, sensitive, or confidential images without
-    permission.
+## 9. Inspection Output Examples
 
-## 🔮 Future Improvements
+The images below are intended to show example outputs from the current application. The image paths must match the actual filenames committed to the GitHub repository.
 
--   Improve annotation quality and dataset balance.
--   Collect more representative images for each damage category.
--   Tune training parameters and evaluate alternatives.
--   Measure per-class precision, recall, and mAP on a held-out test set.
--   Reduce false positives and overlapping detections.
--   Improve localization and display of predicted damage.
--   Add clearer inspection history and report management.
--   Add a human-confirmed status field separate from model predictions.
--   Improve deployment dependency management and error handling.
+If your files are in the `Inspection Report` folder, use their exact relative paths. For example:
 
-## 👨‍💻 Author
+```markdown
+![Inspection output](Inspection%20Report/Car%20damages%204.png)
+```
 
-**Rohit Rajaram Yadav**\
-B.Tech --- Automation & Robotics Engineering
+To display an image directly on GitHub, the path in the Markdown must match the committed filename and folder structure.
 
-### Connect with me
+### Example inspection images
 
--   **LinkedIn:** https://www.linkedin.com/in/rohit-yadav-6b8999299/
--   **GitHub profile:** https://github.com/ar-rohit01
--   **Project repository:**
-    https://github.com/ar-rohit01/Automotive_Inspection
--   **Streamlit app:** `ADD_YOUR_STREAMLIT_APP_URL_HERE`
+Add the following image references after confirming the exact paths:
 
-## 📌 Project Summary
+```markdown
+![Inspection output 1](Inspection%20Report/Car%20damages%204.png)
 
-The AI-Based Automotive Visual Inspection & Quality Control System is a
-computer-vision prototype that applies a trained YOLO model to
-automotive images and presents predicted damage detections through a
-Streamlit interface. It includes annotated visual outputs and CSV export
-to support human review. The model's current performance is limited, and
-further data, training, and evaluation work is required before it could
-be considered for practical inspection use.
+![Inspection output 2](Inspection%20Report/Car%20damages%20103.png)
+
+![Inspection output 3](Inspection%20Report/Car%20damages%2011.png)
+
+![Inspection output 4](Inspection%20Report/Car%20damages%20152.png)
+
+![Inspection output 5](Inspection%20Report/Car%20damages%2072.png)
+
+![Inspection output 6](Inspection%20Report/Car%20damages%20255.png)
+```
+
+Verify each filename before using these references. If an image is stored in a subfolder, include that subfolder in the path.
+
+## 10. CSV Inspection Reports
+
+The application can generate downloadable CSV reports containing inspection metadata and predicted detections.
+
+Depending on the report produced by the application, the information may include:
+
+- Inspection ID
+- Inspection date and time
+- Source image filename
+- Selected vehicle model
+- Inspector name
+- Predicted damage category
+- Confidence score
+- Class ID
+- Bounding-box coordinates
+- Human-review status
+
+To make a report accessible from GitHub, commit the CSV file to the repository and link it using its exact relative path.
+
+Example Markdown:
+
+```markdown
+[View inspection report](Inspection%20Report/your_actual_report.csv)
+```
+
+Replace `your_actual_report.csv` with the real CSV filename.
+
+## 11. Dataset and Attribution
+
+The project uses the public **Car Parts and Car Damages Dataset** from Humans in the Loop.
+
+Dataset source:
+
+https://humansintheloop.org/resources/datasets/car-parts-and-car-damages-dataset/
+
+The dataset source describes the dataset as CC0. Review the source page for the dataset's details and terms.
+
+## 12. Limitations and Responsible Use
+
+- The current model has low precision, recall, and mAP scores.
+- Predictions can include false positives, missed damage, and duplicate detections.
+- Performance may vary with image quality, lighting, viewing angle, and damage type.
+- The current evaluation does not establish real-world automotive inspection reliability.
+- Visual improvements to the interface do not improve model accuracy.
+- A human inspector must verify the predictions.
+
+**Do not use this prototype as the sole basis for vehicle safety, roadworthiness, repair, insurance, or pass/fail decisions.**
+
+## 13. Future Improvements
+
+- Improve dataset quality and annotation consistency.
+- Increase and diversify training examples for each damage class.
+- Evaluate per-class precision, recall, and mAP.
+- Reduce false-positive and duplicate detections.
+- Test on a representative, separate collection of vehicle images.
+- Improve confidence calibration and detection localization.
+- Add structured human-review workflows.
+- Validate the system thoroughly before considering any practical deployment.
+
+## 14. Deployment Status
+
+The application is designed to run locally using Streamlit. Deployment to Streamlit Community Cloud can be completed after the project has been pushed to GitHub.
+
+**Streamlit app:** Add the published URL here after deployment succeeds.
+
+## 15. Author and Links
+
+**Rohit Rajaram Yadav**  
+B.Tech — Automation & Robotics Engineering
+
+- **GitHub:** https://github.com/ar-rohit01
+- **LinkedIn:** https://www.linkedin.com/in/rohit-yadav-6b8999299/
+
+---
+
+*This project is an educational computer-vision prototype. Its predictions require human verification and are not a substitute for professional vehicle inspection.*
