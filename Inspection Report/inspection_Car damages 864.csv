@@ -1,0 +1,4 @@
+Inspection ID,Date and time,Image filename,Vehicle model,Inspector,Damage,Confidence (%),Class ID,X1,Y1,X2,Y2,Review status
+DF7A5FE1,14-10-2026 07:55:29,Car damages 864.png,Other / Unknown,Not specified,Broken part,63.54,0,178.6,117.5,518.6,183.6,Requires human review
+DF7A5FE1,14-10-2026 07:55:29,Car damages 864.png,Other / Unknown,Not specified,Broken part,51.98,0,207.7,160.0,544.5,357.8,Requires human review
+DF7A5FE1,14-10-2026 07:55:29,Car damages 864.png,Other / Unknown,Not specified,Missing part,33.56,5,469.2,245.2,535.2,296.4,Requires human review

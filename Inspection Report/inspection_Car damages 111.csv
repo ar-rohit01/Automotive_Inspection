@@ -1,0 +1,7 @@
+Inspection ID,Date and time,Image filename,Vehicle model,Inspector,Damage,Confidence (%),Class ID,X1,Y1,X2,Y2,Review status
+C4FF7FFD,14-10-2026 07:50:13,Car damages 111.png,Other / Unknown,Not specified,Scratch,41.94,7,226.6,61.3,258.4,71.0,Requires human review
+C4FF7FFD,14-10-2026 07:50:13,Car damages 111.png,Other / Unknown,Not specified,Scratch,36.06,7,237.4,83.4,270.2,98.1,Requires human review
+C4FF7FFD,14-10-2026 07:50:13,Car damages 111.png,Other / Unknown,Not specified,Scratch,29.32,7,272.6,147.5,311.3,184.4,Requires human review
+C4FF7FFD,14-10-2026 07:50:13,Car damages 111.png,Other / Unknown,Not specified,Scratch,26.29,7,368.0,217.4,496.6,285.1,Requires human review
+C4FF7FFD,14-10-2026 07:50:13,Car damages 111.png,Other / Unknown,Not specified,Scratch,25.55,7,408.0,213.8,438.2,230.4,Requires human review
+C4FF7FFD,14-10-2026 07:50:13,Car damages 111.png,Other / Unknown,Not specified,Dent,25.17,3,248.9,134.7,349.6,289.6,Requires human review

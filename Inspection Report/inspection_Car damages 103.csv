@@ -1,0 +1,4 @@
+Inspection ID,Date and time,Image filename,Vehicle model,Inspector,Damage,Confidence (%),Class ID,X1,Y1,X2,Y2,Review status
+2F535096,14-10-2026 07:59:18,Car damages 103.png,Other / Unknown,Not specified,Broken part,68.34,0,510.9,239.1,571.8,359.2,Requires human review
+2F535096,14-10-2026 07:59:18,Car damages 103.png,Other / Unknown,Not specified,Dent,42.63,3,543.8,186.5,638.1,310.8,Requires human review
+2F535096,14-10-2026 07:59:18,Car damages 103.png,Other / Unknown,Not specified,Broken part,36.12,0,393.7,273.8,479.8,316.5,Requires human review

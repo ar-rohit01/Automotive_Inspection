@@ -1,0 +1,2 @@
+Inspection ID,Date and time,Image filename,Vehicle model,Inspector,Damage,Confidence (%),Class ID,X1,Y1,X2,Y2,Review status
+AECF49A1,14-10-2026 07:46:36,Car damages 14.png,Other / Unknown,Not specified,Missing part,58.73,5,249.1,303.0,379.2,334.7,Requires human review

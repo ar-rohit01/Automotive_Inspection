@@ -1,0 +1,2 @@
+Inspection ID,Date and time,Image filename,Vehicle model,Inspector,Damage,Confidence (%),Class ID,X1,Y1,X2,Y2,Review status
+55C1DDBD,14-10-2026 08:20:05,Car damages 116.png,Other / Unknown,Not specified,Dent,52.25,3,299.1,205.5,437.9,252.0,Requires human review
