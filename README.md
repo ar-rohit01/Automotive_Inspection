@@ -208,7 +208,7 @@ Automotive_Inspection/
 
 The application is fully configured and deployed on **Streamlit Community Cloud**:
 
-* **Live Web App:** [https://ar-rohit01-automotive-inspection.streamlit.app](https://ar-rohit01-automotive-inspection.streamlit.app)
+* **Live Web App:** [https://automotiveinspection-qwnzd9tybjbgajawkwmp3r.streamlit.app/]
 
 ## 💡 Why This Project?
 
