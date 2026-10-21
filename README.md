@@ -234,7 +234,7 @@ This project demonstrates practical implementation of several important computer
 
 * **Areas of Interest:** Artificial Intelligence, Machine Learning, Computer Vision, Generative AI, Intelligent Automation
 
-* **LinkedIn:** [https://www.linkedin.com/in/rohit-yadav-6b8999299](https://www.linkedin.com/in/rohit-yadav-6b8999299)
+* **LinkedIn:** [www.linkedin.com/in/rohitryadavgenai](https://www.linkedin.com/in/rohitryadavgenai)
 
 * **GitHub:** [https://github.com/ar-rohit01](https://github.com/ar-rohit01)
 
